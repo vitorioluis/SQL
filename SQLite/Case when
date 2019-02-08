@@ -1,0 +1,7 @@
+
+SELECT titulo_obra,
+       ano_lançamento,
+       CASE WHEN ano_lançamento >= 2016 THEN 'Novo' 
+            WHEN ano_lançamento > 2013 THEN "Mais ou menos" 
+            ELSE "velho" END AS [Classificação filme]
+  FROM tb_ml_filmes;
